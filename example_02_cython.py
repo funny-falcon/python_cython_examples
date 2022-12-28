@@ -46,11 +46,11 @@ def main():
         [a.update(preys) for a in predators]
 
         # handle eaten and create new plant
-        plants = [p for p in plants if p.is_alive is True]
+        plants = [p for p in plants if p.is_alive]
         plants = plants + [Plant(world_width=WORLD_WIDTH, world_height=WORLD_HEIGHT) for i in range(2)]
 
         # handle eaten and create new preys
-        preys = [p for p in preys if p.is_alive is True]
+        preys = [p for p in preys if p.is_alive]
 
         for p in preys[:]:
             if p.energy > 5:

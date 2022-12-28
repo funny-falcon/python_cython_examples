@@ -17,6 +17,8 @@ cdef class Agent():
     cdef public int energy
     cdef Agent target
 
+    cpdef readonly bint is_alive
+
     def __init__(self, x=None, y=None, world_width=0, world_height=0):
         self.world_width = world_width
         self.world_height = world_height
